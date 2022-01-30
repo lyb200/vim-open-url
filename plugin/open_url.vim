@@ -28,6 +28,8 @@ nnoremap <Plug>(open-url-search-baidu) :OpenSearchURL baidu <cword><CR>
 xnoremap <Plug>(open-url-search-baidu) :<C-U>OpenSearchURL baidu <C-R>=open_url#get_selection()<CR><CR>
 nnoremap <Plug>(open-url-search-bing) :OpenSearchURL bing <cword><CR>
 xnoremap <Plug>(open-url-search-bing) :<C-U>OpenSearchURL bing <C-R>=open_url#get_selection()<CR><CR>
+nnoremap <Plug>(open-url-search-translate) :OpenSearchURL translate <cword><CR>
+xnoremap <Plug>(open-url-search-translate) :<C-U>OpenSearchURL translate <C-R>=open_url#get_selection()<CR><CR>
 nnoremap <Plug>(open-url-search-so) :OpenSearchURL so <cword><CR>
 xnoremap <Plug>(open-url-search-so) :<C-U>OpenSearchURL so <C-R>=open_url#get_selection()<CR><CR>
 nnoremap <Plug>(open-url-search-google) :OpenSearchURL google <cword><CR>
@@ -72,6 +74,13 @@ if g:open_url_default_mappings
   endif
   if !hasmapto('<Plug>(open-url-search-bing)', 'x')
     xmap sm <Plug>(open-url-search-bing)
+  endif
+  " for baidu translate
+  if !hasmapto('<Plug>(open-url-search-bing)', 'n')
+    nmap <leader>gt <Plug>(open-url-search-translate)
+  endif
+  if !hasmapto('<Plug>(open-url-search-bing)', 'x')
+    xmap <leader>gt <Plug>(open-url-search-translate)
   endif
   if !hasmapto('<Plug>(open-url-search-wikipedia)', 'n')
     nmap sW <Plug>(open-url-search-wikipedia)
