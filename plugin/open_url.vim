@@ -76,10 +76,10 @@ if g:open_url_default_mappings
     xmap sm <Plug>(open-url-search-bing)
   endif
   " for baidu translate
-  if !hasmapto('<Plug>(open-url-search-bing)', 'n')
+  if !hasmapto('<Plug>(open-url-search-translate)', 'n')
     nmap <leader>gt <Plug>(open-url-search-translate)
   endif
-  if !hasmapto('<Plug>(open-url-search-bing)', 'x')
+  if !hasmapto('<Plug>(open-url-search-translate)', 'x')
     xmap <leader>gt <Plug>(open-url-search-translate)
   endif
   if !hasmapto('<Plug>(open-url-search-wikipedia)', 'n')
