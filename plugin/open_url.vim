@@ -24,6 +24,10 @@ xnoremap <Plug>(open-url-browser) :<C-U>OpenURL <C-R>=open_url#get_selection()<C
 nnoremap <Plug>(open-url-search) :OpenSearchURL <cword><CR>
 xnoremap <Plug>(open-url-search) :<C-U>OpenSearchURL <C-R>=open_url#get_selection()<CR><CR>
 
+nnoremap <Plug>(open-url-search-baidu) :OpenSearchURL baidu <cword><CR>
+xnoremap <Plug>(open-url-search-baidu) :<C-U>OpenSearchURL baidu <C-R>=open_url#get_selection()<CR><CR>
+nnoremap <Plug>(open-url-search-bing) :OpenSearchURL bing <cword><CR>
+xnoremap <Plug>(open-url-search-bing) :<C-U>OpenSearchURL bing <C-R>=open_url#get_selection()<CR><CR>
 nnoremap <Plug>(open-url-search-so) :OpenSearchURL so <cword><CR>
 xnoremap <Plug>(open-url-search-so) :<C-U>OpenSearchURL so <C-R>=open_url#get_selection()<CR><CR>
 nnoremap <Plug>(open-url-search-google) :OpenSearchURL google <cword><CR>
@@ -48,22 +52,37 @@ if g:open_url_default_mappings
   if !hasmapto('<Plug>(open-url-browser)', 'x')
     xmap gB <Plug>(open-url-browser)
   endif
+  " default
   if !hasmapto('<Plug>(open-url-search)', 'n')
-    nmap g<CR> <Plug>(open-url-search)
+    nmap s<CR> <Plug>(open-url-search)
   endif
   if !hasmapto('<Plug>(open-url-search)', 'x')
-    xmap g<CR> <Plug>(open-url-search)
+    xmap s<CR> <Plug>(open-url-search)
+  endif
+  " for baidu
+  if !hasmapto('<Plug>(open-url-search-baidu)', 'n')
+    nmap sb <Plug>(open-url-search-baidu)
+  endif
+  if !hasmapto('<Plug>(open-url-search)-baidu', 'x')
+    xmap sb <Plug>(open-url-search-baidu)
+  endif
+  " for microsoft bing
+  if !hasmapto('<Plug>(open-url-search-bing)', 'n')
+    nmap sm <Plug>(open-url-search-bing)
+  endif
+  if !hasmapto('<Plug>(open-url-search-bing)', 'x')
+    xmap sm <Plug>(open-url-search-bing)
   endif
   if !hasmapto('<Plug>(open-url-search-wikipedia)', 'n')
-    nmap gW <Plug>(open-url-search-wikipedia)
+    nmap sW <Plug>(open-url-search-wikipedia)
   endif
   if !hasmapto('<Plug>(open-url-search-wikipedia)', 'x')
-    xmap gW <Plug>(open-url-search-wikipedia)
+    xmap sW <Plug>(open-url-search-wikipedia)
   endif
   if !hasmapto('<Plug>(open-url-search-google)', 'n')
-    nmap gG <Plug>(open-url-search-google)
+    nmap sG <Plug>(open-url-search-google)
   endif
   if !hasmapto('<Plug>(open-url-search-google)', 'x')
-    xmap gG <Plug>(open-url-search-google)
+    xmap sG <Plug>(open-url-search-google)
   endif
 endif
