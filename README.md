@@ -13,9 +13,9 @@ default web browser.
 * `:OpenIn <browser> <url>` to open given url in the specified web browser
 * `:OpenSearchURL <engine> <search terms>` to search the `search terms` using
   registered search engine.
-  > The default search engine is `duckduckgo`
-  > However, `google`, `stackoverflow` and `wikipedia` are also available. You
-  > can change the default by setting `g:open_url#engines#default`.
+  > The default search engine is `baidu`
+  > However, `baidu`, `bing` ,`google`, `stackoverflow` and `wikipedia` are also available.
+  > You can change the default by setting `g:open_url#engines#default`.
   >
   > Search engines can be added using the API `open_url#engines#add(name, pattern)`
   > where name is a logical name and pattern is a string that represents the
@@ -30,9 +30,11 @@ default web browser.
 These work in both normal mode and visual mode :
 
 * <kbd>gB</kbd>: Open url under cursor in the default web browser.
-* <kbd>g&lt;CR&gt;</kbd>: Search word under cursor using default search engine
-* <kbd>gG</kbd>: Google search word under cursor in the default web browser
-* <kbd>gW</kbd>: Wikipedia search word under cursor in the default web browser
+* <kbd>s&lt;CR&gt;</kbd>: Search word under cursor using default search engine
+* <kbd>sb</kbd>: Baidu search word under cursor in the default web browser
+* <kbd>sm</kbd>: Microsoft bing search word under cursor in the default web browser
+* <kbd>sG</kbd>: Google search word under cursor in the default web browser
+* <kbd>sW</kbd>: Wikipedia search word under cursor in the default web browser
 
 The following plug mappings are provided which can be remapped if you prefer
 different mappings to those provided by default.
@@ -40,6 +42,8 @@ different mappings to those provided by default.
 * `<Plug>(open-url-browser)`
 * `<Plug>(open-url-search)`
 * `<Plug>(open-url-search-so)`
+* `<Plug>(open-url-search-baidu)`
+* `<Plug>(open-url-search-bing)`
 * `<Plug>(open-url-search-google)`
 * `<Plug>(open-url-search-wikipedia)`
 
