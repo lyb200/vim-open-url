@@ -38,8 +38,8 @@ OPTIONS                                                       *open-url-options*
 
     g:open_url#engines#default                        *open_url#engines#default*
         Sets the default search engine.
-        Defaults to `duckduckgo`. Should be one of the registered search
-        engines: `google`, `so`, `duckduckgo`, `wikipedia`.
+        Defaults to `baidu`. Should be one of the registered search
+        engines: `baidu`, `bing`, `google`, `so`, `duckduckgo`, `wikipedia`.
 
 ===============================================================================
 Mappings                                                     *open-url-mappings*
@@ -49,6 +49,15 @@ Mappings                                                     *open-url-mappings*
 
     `g<CR>`                                                     *open-url-g<CR>*
         Search word under cusor using the default search
+
+    `sb`                                                            *open-url-b*
+        Baidu search word under cursor in the default web browser
+
+    `sm`                                                            *open-url-m*
+        Bing search word under cursor in the default web browser
+
+    `<leader>gt`                                                   *open-url-gt*
+        Baidu fanyi word under cursor in the default web browser
 
     `gG`                                                           *open-url-gG*
         Google search word under cursor in the default web browser
@@ -62,6 +71,9 @@ Mappings                                                     *open-url-mappings*
     `<Plug>(open-url-browser)`
     `<Plug>(open-url-search)`
     `<Plug>(open-url-search-so)`        " Unmapped by default
+    `<Plug>(open-url-search-baidu)`
+    `<Plug>(open-url-search-bing)`
+    `<Plug>(open-url-search-translate)`
     `<Plug>(open-url-search-google)`
     `<Plug>(open-url-search-wikipedia)`
 

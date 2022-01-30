@@ -33,6 +33,7 @@ These work in both normal mode and visual mode :
 * <kbd>s&lt;CR&gt;</kbd>: Search word under cursor using default search engine
 * <kbd>sb</kbd>: Baidu search word under cursor in the default web browser
 * <kbd>sm</kbd>: Microsoft bing search word under cursor in the default web browser
+* <kbd><leader>gt</kbd>: Baidu fanyi word under cursor in the default web browser
 * <kbd>sG</kbd>: Google search word under cursor in the default web browser
 * <kbd>sW</kbd>: Wikipedia search word under cursor in the default web browser
 
@@ -44,6 +45,7 @@ different mappings to those provided by default.
 * `<Plug>(open-url-search-so)`
 * `<Plug>(open-url-search-baidu)`
 * `<Plug>(open-url-search-bing)`
+* `<Plug>(open-url-search-translate)`
 * `<Plug>(open-url-search-google)`
 * `<Plug>(open-url-search-wikipedia)`
 
